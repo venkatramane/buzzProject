@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="295.033757">
+<testcase classname="getting deatils from crirbuzz site" name="clicking live score page butn" time="295.033757">
+<system-out><![CDATA[Given user on home page.....................................................passed
+Then click livescore and score card butn....................................passed
+Then getting score card deatils and writing in workbook.....................passed
+]]></system-out>
+</testcase>
+</testsuite>

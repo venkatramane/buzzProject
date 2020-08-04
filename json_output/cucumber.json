@@ -1,0 +1,58 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "clicking live score page butn",
+        "description": "",
+        "id": "getting-deatils-from-crirbuzz-site;clicking-live-score-page-butn",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 42446583479,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user on home page",
+            "match": {
+              "location": "LiveScoreCardDeatils.user_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 13120930010,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "click livescore and score card butn",
+            "match": {
+              "location": "LiveScoreCardDeatils.click_livescore_and_score_card_butn()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 239466243378,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "getting score card deatils and writing in workbook",
+            "match": {
+              "location": "LiveScoreCardDeatils.getting_score_card_deatils_and_writing_in_workbook()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "getting deatils from crirbuzz site",
+    "description": "",
+    "id": "getting-deatils-from-crirbuzz-site",
+    "keyword": "Feature",
+    "uri": "C:/Users/VENKATRAMAN/workspace/CricbuzzCucumber/src/main/java/Features/liveMatchScoreCard.feature"
+  }
+]
