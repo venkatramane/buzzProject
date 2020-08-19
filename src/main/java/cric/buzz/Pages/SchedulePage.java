@@ -83,7 +83,7 @@ import cric.buzz.Util.TestBase;
 		scheduleAustrila.click();
 		
 	}
-	// Scenario 2
+	// Scenario 2(Australian Series)
 	public void onlyAustrilanSeries() throws Exception{
 		FileInputStream fis = new FileInputStream("E:\\EXceL Automate\\Cricbuzz_Project.xlsx");
 		XSSFWorkbook wb = new XSSFWorkbook(fis);
