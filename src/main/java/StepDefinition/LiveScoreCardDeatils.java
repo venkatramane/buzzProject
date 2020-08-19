@@ -29,9 +29,10 @@ public class LiveScoreCardDeatils extends TestBase{
 	@Then("^getting score card deatils and writing in workbook$")
 	public void getting_score_card_deatils_and_writing_in_workbook() throws Throwable {
 		
-		livescore.FeedingTitleOfTheMatch();
-		livescore.FeedingMatchStatus();
-		livescore.Feeding_Scorecard();
+		livescore.TitleOfTheMatch();
+		livescore.MatchStatus();
+		livescore.Inings_Scorecard();
+		LiveScoreBoard.closeExcel();
 	   
 	}
 

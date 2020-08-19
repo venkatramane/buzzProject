@@ -24,7 +24,7 @@ public class TestBase {
 		}
 	}
 	
-	public static void initialization(){
+	public static void initialization() throws Exception{
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.equals("chrome")){
@@ -45,6 +45,7 @@ public class TestBase {
 		driver.manage().timeouts().pageLoadTimeout(80, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(70, TimeUnit.SECONDS);
 		
+		Thread.sleep(3000);
 		driver.get(prop.getProperty("url"));
 		
 	}

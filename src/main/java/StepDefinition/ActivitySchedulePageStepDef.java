@@ -14,7 +14,7 @@ public class ActivitySchedulePageStepDef extends TestBase {
 	SchedulePage schedulepage;
 	
 	@Given("^user on schedule page$")
-	public void user_on_schedule_page() {
+	public void user_on_schedule_page() throws Exception {
 		
 		TestBase.initialization();
 		homepage = new HomePage();

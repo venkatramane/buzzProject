@@ -56,7 +56,7 @@ public class LiveScoreBoard extends TestBase{
 //	public static WebElement matchStatusLive;
 //	
 	
-	public LiveScoreBoard() throws IOException {                                                       // Constructor
+	public LiveScoreBoard() throws IOException {                                                     
 		
 		
 //			PageFactory.initElements(driver, this);
@@ -73,25 +73,29 @@ public class LiveScoreBoard extends TestBase{
 		 int index=0;
 		
 			
-			sheet=workbook.getSheet("Scenario_3");                                
+			sheet=workbook.getSheet("liveMatchScorecard");                                
 			
 			if(sheet!=null) {
-				index =workbook.getSheetIndex("Scenario_3");                     // To get the index of the sheet
+				index =workbook.getSheetIndex("liveMatchScorecard");                     // To get the index of the sheet
 				
 				workbook.removeSheetAt(index);                                   // Removing the sheet using index
 			}
-			sheet=workbook.createSheet("Scenario_3");
+			sheet=workbook.createSheet("liveMatchScorecard");
 	}
 
 	public void clickLiveScore(){
 //		liveScoreBtn.click();
-		driver.findElement(By.xpath("//a[contains(text(),'Live Scores')]")).click();
-		driver.findElement(By.xpath("(//a[contains(text(),'Scorecard')])[1]")).click();
+//		driver.findElement(By.xpath("//a[contains(text(),'Live Scores')]")).click();
+//		driver.findElement(By.xpath("(//a[contains(text(),'Scorecard')])[1]")).click();
+		
+		driver.findElement(By.xpath("(//li[@class='cb-col cb-col-25 cb-mtch-blk cb-vid-sml-card-api videos-carousal-item cb-carousal-item-large cb-view-all-ga'])[1]")).click();
+		driver.findElement(By.xpath("//a[contains(text(),'Scorecard')]")).click();
+	
 	}
 	
-	public void FeedingTitleOfTheMatch() {
+	public void TitleOfTheMatch() {
 		
-		title=driver.findElement(By.xpath("//h1[contains(text(),'Live Cricket Score')]")).getText();
+		title=driver.findElement(By.xpath("//h1[@class='cb-nav-hdr cb-font-18 line-ht24']")).getText();
 		 XSSFRow row=sheet.createRow(0);                                                    // Setting font Style for Headers
 			XSSFCell cell=row.createCell(0);
 			XSSFCellStyle style=workbook.createCellStyle();
@@ -106,7 +110,7 @@ public class LiveScoreBoard extends TestBase{
 	}
 	
 	
-	public void FeedingMatchStatus() {                                                         // Match Status
+	public void MatchStatus() {                                                         // Match Status
 		
 		 String colour=null;
 			
@@ -143,12 +147,12 @@ public class LiveScoreBoard extends TestBase{
 	}
 	
 	
-	public void Feeding_Scorecard() {                                                                               // Batting Scorecard
+	public void Inings_Scorecard() {                                                                               // Batting Scorecard
 		
 		
 		
 		List<WebElement> InningsCount= driver.findElements(By.xpath("(//div[@class='ng-scope'])"));                // Number of Innings
-		System.out.println("Number of Innings : "+ (InningsCount.size()-1));
+		System.out.println("Innings : "+ (InningsCount.size()-1));
 		
 	try {	
 		
@@ -562,7 +566,7 @@ public class LiveScoreBoard extends TestBase{
 			 XSSFRow row=sheet.getRow(lastRow);
 		     	XSSFCell cell=row.createCell(cellBowCard);
 		     	XSSFCellStyle style=workbook.createCellStyle();
-		     	style.setFillForegroundColor(headerColor);                                           // Fill cell with Gray foreground 
+		     	style.setFillForegroundColor(headerColor);                                            
 		         style.setFillPattern(FillPatternType.SOLID_FOREGROUND);
 		     	XSSFFont font=workbook.createFont();
 		     	font.setBold(true);
@@ -658,12 +662,6 @@ public class LiveScoreBoard extends TestBase{
 		}	
 	}
 	
-	
-	
-	private CellRangeAddress CellRangeAddress(int lastRow2, int cellFOW) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
 

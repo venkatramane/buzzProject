@@ -33,21 +33,21 @@ formatter.match({
   "location": "LiveScoreCardDeatils.user_on_home_page()"
 });
 formatter.result({
-  "duration": 42446583479,
+  "duration": 13707244118,
   "status": "passed"
 });
 formatter.match({
   "location": "LiveScoreCardDeatils.click_livescore_and_score_card_butn()"
 });
 formatter.result({
-  "duration": 13120930010,
+  "duration": 4690968825,
   "status": "passed"
 });
 formatter.match({
   "location": "LiveScoreCardDeatils.getting_score_card_deatils_and_writing_in_workbook()"
 });
 formatter.result({
-  "duration": 239466243378,
+  "duration": 5126425799,
   "status": "passed"
 });
 });

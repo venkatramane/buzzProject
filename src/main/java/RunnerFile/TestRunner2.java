@@ -13,9 +13,9 @@ import cucumber.api.junit.Cucumber;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features="C:\\Users\\VENKATRAMAN\\workspace\\CricbuzzCucumber\\src\\main\\java\\Features\\liveMatchScoreCard.feature", 
+		features="C:\\Users\\VENKATRAMAN\\workspace\\CricbuzzCucumber\\src\\main\\java\\Features\\matchesscheduleprint.feature", 
 		glue={"StepDefinition"},
-				plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html"},
+				plugin = { "com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report123.html"},
 
 		format={"pretty","html:test-output","json:json_output/cucumber.json","junit:junit_xml/cucumber.xml"},
 		monochrome=true,
@@ -23,7 +23,7 @@ import cucumber.api.junit.Cucumber;
 		dryRun=false
 		)			
 
-public class TestRunner {
+public class TestRunner2 {
 	
 	public static void writeExtentReport() {
 		Reporter.loadXMLConfig(new File(FileReaderManager.getInstance().getConfigReader().getReportConfigPath()));
